@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:padding="6dp"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/RLDateFrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/lblDateFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date From"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvDateFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tvDateFrom"
+                android:layout_below="@+id/lblDateFrom"
+                android:textColor="@color/colorWhite"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/RLDateTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/lblDateTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date To"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvDateTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tvDateTo"
+                android:layout_below="@+id/lblDateTo"
+                android:textColor="@color/colorWhite"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVScanList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabScanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/camera"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
